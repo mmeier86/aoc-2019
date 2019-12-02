@@ -24,14 +24,10 @@ if(UNITTESTS_ENABLED)
 
   get_filename_component(CATCH_DIR ${CMAKE_CURRENT_LIST_DIR}/../third_party/catch/ ABSOLUTE)
 
-  add_library(catch2 INTERFACE)
+  add_library(catch2 STATIC ${CATCH_DIR}/catch_main.cpp)
   target_include_directories(catch2
-    INTERFACE
+    PUBLIC
     ${CATCH_DIR}
-    )
-  target_compile_definitions(catch2
-    INTERFACE
-    CATCH_CONFIG_MAIN
     )
 
   macro(add_ut t_name t_file)
