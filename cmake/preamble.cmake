@@ -13,3 +13,4 @@ string(APPEND CMAKE_CXX_FLAGS_DEBUG " -Wall -Werror -Wextra")
 list(APPEND CMAKE_MODULE_PATH ${ROOT_DIR}/cmake)
 
 include(UT)
+include(common)
