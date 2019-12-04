@@ -13,13 +13,13 @@ namespace AoC::common{
 
 namespace fs = std::filesystem;
 
-  class AoCError: std::runtime_error{
+  class AoCError: public std::runtime_error{
   public:
     explicit AoCError(const std::string& msg):
       runtime_error(msg){}
   };
 
-class FileNotFound: AoCError{
+class FileNotFound: public AoCError{
 public:
   explicit FileNotFound(const fs::path& failedFile):
     AoCError(std::string("File not found: ").append(failedFile)){}
