@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include "AocDay.hpp"
+
 #include <filesystem>
 #include <fstream>
 
@@ -38,5 +40,21 @@ public:
 private:
   fs::path filepath;
 };
+
+template<typename TType,std::string Part1Mock(), std::string Part2Mock()>
+class DayClassMock: public AoCDay<TType>{
+public:
+  using AoCDay<TType>::AoCDay;
+
+  virtual std::string part1() override{
+    return Part1Mock();
+  }
+
+  virtual std::string part2() override{
+    return Part2Mock();
+  }
+};
+
+
 }
 

@@ -11,3 +11,6 @@ target_include_directories(common INTERFACE ${CMAKE_CURRENT_LIST_DIR})
 
 add_ut(tokenizer_ut tokenizer_ut.cpp)
 link_ut(tokenizer_ut PRIVATE common)
+
+add_ut(main_ut main_ut.cpp)
+link_ut(main_ut PRIVATE common)
