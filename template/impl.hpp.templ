@@ -1,0 +1,27 @@
+/**
+ * @file {{NAME}}.hpp
+ * @brief Implementation for Day {{DAY}} of the Advent of Code 2019
+ */
+
+#pragma once
+
+#include "AocDay.hpp"
+
+namespace AoC::common{
+
+class Day{{DAY}}: public AoCDay<int>{
+public:
+  using AoCDay<int>::AoCDay;
+
+  virtual std::string part1() override{
+    return std::string("One");
+  }
+
+  virtual std::string part2() override{
+    return std::string("Two");
+  }
+};
+
+}
+
+using DayClass = AoC::common::Day{{DAY}};
